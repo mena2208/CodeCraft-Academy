@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contáctanos | CodeCraft Academy</title>
+  <style>
+    :root {
+      --azul-principal: #1E88E5;
+      --gris-medio: #90A4AE;
+      --azul-claro: #E3F2FD;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--azul-claro);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--azul-principal);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: var(--gris-medio);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    main {
+      max-width: 600px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: var(--azul-principal);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    form {
+      background-color: white;
+      padding: 20px;
+      border: 1px solid var(--gris-medio);
+      border-left: 5px solid var(--azul-principal);
+      border-radius: 4px;
+    }
+
+    form label {
+      font-weight: bold;
+      display: block;
+      margin-top: 10px;
+    }
+
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 20px;
+      border: 1px solid var(--gris-medio);
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    form button {
+      background-color: var(--azul-principal);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius: 4px;
+    }
+
+    form button:hover {
+      background-color: #1565C0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--gris-medio);
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Contáctanos</h1>
+    <p>¿Tienes dudas o quieres más información? ¡Escríbenos!</p>
+  </header>
+
+  <!-- Menú de navegación añadido -->
+  <nav>
+    <a href="index (1).html">Oferta Educativa</a>
+    <a href="cursos.html">Catálogo</a>
+    <a href="testimonios.html">Opiniones</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <h2>Formulario de Contacto</h2>
+    <form action="#" method="post">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" placeholder="tucorreo@example.com" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribe tu mensaje aquí..." required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CodeCraft Academy. Todos los derechos reservados.</p>
+  </footer>
+
+</body>
+</html>

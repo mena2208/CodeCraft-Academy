@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Catálogo de Cursos | CodeCraft Academy</title>
+  <style>
+    :root {
+      --azul-principal: #1E88E5;
+      --gris-medio: #90A4AE;
+      --azul-claro: #E3F2FD;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--azul-claro);
+      color: #333;
+    }
+
+    header {
+      background-color: var(--azul-principal);
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    /* Menú de navegación */
+    nav {
+      background-color: var(--gris-medio);
+      display: flex;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    nav a.activo {
+      text-decoration: underline;
+      color: #FFD700; /* Amarillo dorado para el enlace activo */
+    }
+
+    main {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    h2 {
+      color: var(--azul-principal);
+      margin-bottom: 20px;
+    }
+
+    .catalogo-filtros {
+      margin-bottom: 30px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 16px;
+      border: 1px solid var(--gris-medio);
+      border-radius: 4px;
+    }
+
+    .curso {
+      background-color: white;
+      border: 1px solid var(--gris-medio);
+      border-left: 5px solid var(--azul-principal);
+      margin-bottom: 20px;
+      padding: 15px 20px;
+    }
+
+    .curso h3 {
+      margin-top: 0;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background-color: var(--gris-medio);
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Catálogo de Cursos</h1>
+    <p>Explora y filtra nuestros cursos por nivel de dificultad</p>
+  </header>
+
+  <!-- Menú de navegación copiado del index -->
+  <nav>
+    <a href="index (1).html">Oferta Educativa</a>
+    <a href="cursos.html" class="activo">Catálogo</a>
+    <a href="testimonios.html">Opiniones</a>
+    <a href="contacto.html">Contacto</a>
+  </nav>
+
+  <main>
+    <div class="catalogo-filtros">
+      <label for="filtro">Filtrar por categoría:</label>
+      <select id="filtro" onchange="filtrarCursos()">
+        <option value="todos">Todos</option>
+        <option value="basico">Básico</option>
+        <option value="intermedio">Intermedio</option>
+        <option value="avanzado">Avanzado</option>
+      </select>
+    </div>
+
+    <div id="cursos">
+      <div class="curso" data-nivel="basico">
+        <h3>Introducción a la Programación</h3>
+        <p>Aprende los fundamentos de la lógica de programación con ejercicios prácticos.</p>
+      </div>
+      <div class="curso" data-nivel="intermedio">
+        <h3>Desarrollo Web Full Stack</h3>
+        <p>Domina HTML, CSS, JavaScript, Node.js y bases de datos.</p>
+      </div>
+      <div class="curso" data-nivel="basico">
+        <h3>Python desde Cero</h3>
+        <p>Empieza con Python, uno de los lenguajes más populares y versátiles.</p>
+      </div>
+      <div class="curso" data-nivel="avanzado">
+        <h3>JavaScript Avanzado</h3>
+        <p>Aprende técnicas modernas de JS, asincronía, promesas y más.</p>
+      </div>
+      <div class="curso" data-nivel="avanzado">
+        <h3>Data Science & Inteligencia Artificial</h3>
+        <p>Explora análisis de datos, Machine Learning y modelos de IA.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 CodeCraft Academy. Todos los derechos reservados.</p>
+  </footer>
+
+  <script>
+    function filtrarCursos() {
+      const filtro = document.getElementById('filtro').value;
+      const cursos = document.querySelectorAll('.curso');
+
+      cursos.forEach(curso => {
+        const nivel = curso.getAttribute('data-nivel');
+        curso.style.display = (filtro === 'todos' || nivel === filtro) ? 'block' : 'none';
+      });
+    }
+  </script>
+</body>
+</html>
